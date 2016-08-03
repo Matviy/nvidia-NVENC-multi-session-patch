@@ -1,0 +1,45 @@
+fffff800`5ac3637a 486338          movsxd  rdi,dword ptr [rax]
+fffff800`5ac3637d 33db            xor     ebx,ebx
+fffff800`5ac3637f e83c79f3ff      call    fffff800`5ab6dcc0
+fffff800`5ac36384 84c0            test    al,al
+fffff800`5ac36386 746c            je      fffff800`5ac363f4
+fffff800`5ac36388 e8837ff3ff      call    fffff800`5ab6e310
+fffff800`5ac3638d 84c0            test    al,al
+fffff800`5ac3638f 7463            je      fffff800`5ac363f4
+fffff800`5ac36391 8d5302          lea     edx,[rbx+2]
+fffff800`5ac36394 3bfa            cmp     edi,edx
+fffff800`5ac36396 7755            ja      fffff800`5ac363ed
+fffff800`5ac36398 8bcf            mov     ecx,edi
+fffff800`5ac3639a 85ff            test    edi,edi
+fffff800`5ac3639c 740d            je      fffff800`5ac363ab
+fffff800`5ac3639e ffc9            dec     ecx
+fffff800`5ac363a0 7409            je      fffff800`5ac363ab
+fffff800`5ac363a2 ffc9            dec     ecx
+fffff800`5ac363a4 7507            jne     fffff800`5ac363ad
+fffff800`5ac363a6 8d5aff          lea     ebx,[rdx-1]
+fffff800`5ac363a9 eb02            jmp     fffff800`5ac363ad
+fffff800`5ac363ab 8bda            mov     ebx,edx
+fffff800`5ac363ad 399cbd30230000  cmp     dword ptr [rbp+rdi*4+2330h],ebx
+fffff800`5ac363b4 7507            jne     fffff800`5ac363bd              [br=1] <-----PATCH HERE
+fffff800`5ac363b6 b869000000      mov     eax,69h
+fffff800`5ac363bb eb5a            jmp     fffff800`5ac36417
+fffff800`5ac363bd 8b5604          mov     edx,dword ptr [rsi+4]
+fffff800`5ac363c0 8b0e            mov     ecx,dword ptr [rsi]
+fffff800`5ac363c2 448bc7          mov     r8d,edi
+fffff800`5ac363c5 e8fe5df5ff      call    fffff800`5ab8c1c8
+fffff800`5ac363ca 8bd8            mov     ebx,eax
+fffff800`5ac363cc 85c0            test    eax,eax
+fffff800`5ac363ce 7419            je      fffff800`5ac363e9
+fffff800`5ac363d0 448bc8          mov     r9d,eax
+fffff800`5ac363d3 448bc7          mov     r8d,edi
+fffff800`5ac363d6 ba0011e81c      mov     edx,1CE81100h
+fffff800`5ac363db b92fdfab00      mov     ecx,0ABDF2Fh
+fffff800`5ac363e0 e8a38ef3ff      call    fffff800`5ab6f288
+fffff800`5ac363e5 8bc3            mov     eax,ebx
+fffff800`5ac363e7 eb2e            jmp     fffff800`5ac36417
+fffff800`5ac363e9 33c0            xor     eax,eax
+fffff800`5ac363eb eb2a            jmp     fffff800`5ac36417
+fffff800`5ac363ed b81f000000      mov     eax,1Fh
+fffff800`5ac363f2 eb23            jmp     fffff800`5ac36417
+fffff800`5ac363f4 e8c778f3ff      call    fffff800`5ab6dcc0
+fffff800`5ac363f9 84c0            test    al,al
