@@ -1,0 +1,3 @@
+GRID Capture hack.
+
+Patch a conditional jump in the initial CreateEx method a 1-2 nested calls down.
