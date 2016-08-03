@@ -12,8 +12,8 @@
 
 Now live WinDBG won't let you edit virtual memory, so edit it in physical memory.
 
-5) !vtop 0 <virtual address without the `>
+5) !vtop 0 \<virtual address without the `\>
 
-6) !eb <physical address> eb
+6) !eb \<physical address\> eb
 
 DONE
