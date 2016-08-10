@@ -1,0 +1,5 @@
+NvIFR loads the nvscpapi.dll for "3D VISION" which calls Sleep() like a million times for a huge
+10 minute delay. 
+
+Rename the 3d vision folder in Program Files(x86) Nvidia Corporation 3D vision to literally anything else. If the DLLs can't be
+found then the delay disappears.
