@@ -1,3 +1,6 @@
 GRID Capture hack.
 
 Patch a conditional jump in the initial CreateEx method a 1-2 nested calls down.
+
+
+C0 74 7C => C0 EB 7C
