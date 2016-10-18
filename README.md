@@ -17,4 +17,7 @@ Now live WinDBG won't let you edit virtual memory, so edit it in physical memory
 6) !eb \<physical address\> eb
 
 DONE
+
+OR!!! Just change the bcdedit to allow booting into legacy boot mode, and boot without driver
+protection
 ---------------------------------
