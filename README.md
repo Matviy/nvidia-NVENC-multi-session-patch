@@ -1,4 +1,4 @@
-# NVIDIA_HACKING-
+# NVIDIA NVENC UNLIMITED ENCODER SESSION PATCH
 
 1) Load symbols in windbg (.sympath srv*https://msdl.microsoft.com/download/symbols;.reload /f)
 
@@ -8,8 +8,6 @@
 
 4) Confirm that this starts with 75
 
-
-
 Now live WinDBG won't let you edit virtual memory, so edit it in physical memory.
 
 5) !vtop 0 \<virtual address without the `\>
@@ -17,7 +15,6 @@ Now live WinDBG won't let you edit virtual memory, so edit it in physical memory
 6) !eb \<physical address\> eb
 
 DONE
-
-OR!!! Just change the bcdedit to allow booting into legacy boot mode, and boot without driver
-protection
+OR
+Patch the driver dll in the same manner, and boot into mode without driver signature enforcement.
 ---------------------------------
